@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>EcoWholesale Simulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<h1>🌱 EcoWholesale Carbon Awareness Simulator</h1>
+
+<div class="card">
+<h2>Learning Preferences</h2>
+<select id="learning">
+<option>Visual</option><option>Text</option><option>Audio</option><option>Mixed</option>
+</select>
+
+<h2>Step 2: Sustainability Strategy</h2>
+<label><input type="checkbox" class="goal" value="Food Waste Reduction"> Food Waste Reduction</label><br>
+<label><input type="checkbox" class="goal" value="Route Optimization"> Route Optimization</label><br>
+<label><input type="checkbox" class="goal" value="Renewable Energy"> Renewable Energy</label><br>
+<label><input type="checkbox" class="goal" value="Local Sourcing"> Local Sourcing</label><br>
+<label><input type="checkbox" class="goal" value="Reusable Packaging"> Reusable Packaging</label><br>
+<label><input type="checkbox" class="goal" value="Employee Awareness"> Employee Awareness</label><br><br>
+<button onclick="startSim()">Start Operations Week</button>
+</div>
+
+<div id="sim" style="display:none">
+<div class="card"><b>Carbon:</b> <span id="carbon">1250</span> | <b>Budget:</b> €<span id="budget">100000</span> | <b>ESG:</b> <span id="esg">50</span></div>
+
+<div id="cards"></div>
+
+<div class="card">
+<h2 id="title">Choose Manager</h2>
+<p id="story"></p>
+<div id="options"></div>
+</div>
+
+<div class="card">
+<h3>🤖 AI Carbon Coach</h3>
+<p id="coach">Complete scenarios to generate insights.</p>
+</div>
+
+<button id="dashBtn" style="display:none;background:#2ecc71" onclick="location.href='dashboard.html'">📊 Generate Executive Dashboard</button><p>Complete all 9 scenarios to unlock your personalized dashboard.</p>
+</div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
