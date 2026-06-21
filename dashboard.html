@@ -1,0 +1,43 @@
+
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Dashboard</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="wrap">
+<h1>📊 Executive Sustainability Dashboard</h1>
+
+<div class="card">
+<h2>Selected Sustainability Strategy</h2>
+<ul id="goals"></ul>
+</div>
+
+<div class="card">
+<h2>Environmental Impact</h2>
+<p>Carbon Footprint: <span id="carbon"></span> kg CO₂e</p>
+<p>Energy Saved: 1,200 kWh</p>
+<p>Food Waste Prevented: 1,150 kg</p>
+</div>
+
+<div class="card">
+<h2>Business Impact</h2>
+<p>Estimated Cost Savings: €18,500</p>
+<p>Margin Improvement: +2.8%</p>
+<p>Time Saved: 85 Hours</p>
+<p>Fuel Saved: 650 Litres</p>
+</div>
+
+<div class="card">
+<h2>Manager Impact</h2>
+<p>❄ Anna: Cooling efficiency and food protection</p>
+<p>🚚 Lukas: Route and fuel optimization</p>
+<p>📦 Sophie: Packaging and waste reduction</p>
+</div>
+
+<div class="card">
+<h2>AI Executive Summary</h2>
+<p>Strategy aligned with sustainability goals. Operational decisions reduced emissions while improving efficiency and cost performance.</p>
+</div>
+</div>
+<script>
+document.getElementById('carbon').innerText=localStorage.getItem('carbon')||1250;
+const goals=JSON.parse(localStorage.getItem('goals')||'[]');
+document.getElementById('goals').innerHTML=goals.map(g=>'<li>✓ '+g+'</li>').join('');
+</script>
+</body></html>
